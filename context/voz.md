@@ -1,15 +1,9 @@
 # Minha voz
 
-<!-- O /onboarding cola aqui 1 ou 2 textos reais, sem edição. Eles valem mais do que qualquer descrição de estilo. Remova nomes e dados de terceiros antes de colar. -->
+<!-- Só os princípios ficam aqui, porque este arquivo entra no Git. Os textos reais que deram origem a eles ficam em confidencial/voz-exemplos.md, fora do Git, só na sua máquina. -->
+
+Os exemplos reais estão em `confidencial/voz-exemplos.md`. Leia os dois antes de escrever um texto com a minha voz.
 
 ## Princípios
 
-- {{3 a 5 traços observados nos textos abaixo, ex.: "frases curtas", "abre com a conclusão", "sem adjetivos de venda"}}
-
-## Exemplos reais
-
-### Exemplo 1
-{{colar}}
-
-### Exemplo 2
-{{colar}}
+- {{3 a 5 traços observados nos exemplos, ex.: "frases curtas", "abre com a conclusão", "sem adjetivos de venda"}}

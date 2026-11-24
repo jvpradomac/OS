@@ -14,7 +14,7 @@
 ## Mapa
 
 - `context/`: quem eu sou, o fundo, prioridades e minha voz (`voz.md`). Leia `prioridades.md` quando a tarefa envolver o que fazer primeiro.
-- `confidencial/`: material sensível, uma pasta por tema ({{TEMAS, definidos no onboarding}}). Cada pasta tem um `README.md` com o que é, estado e próximo passo.
+- `confidencial/`: material sensível, uma pasta por tema. A lista de temas fica em `confidencial/temas.md`, fora do Git. Cada pasta tem um `README.md` com o que é, estado e próximo passo.
 - `decisoes/log.md`: decisões que estão valendo, com o motivo.
 - `conexoes.md`: sistemas que você alcança e por qual meio.
 - `saidas/`: o que você gerar para mim, com data no nome.
@@ -24,7 +24,7 @@
 - {{IDIOMA_E_FORMATO. Ex.: "Responda em português, direto, com a conclusão primeiro e bullets curtos."}}
 - Número que vai para fora (comitê, cliente, parceiro) sempre vem com a fonte: arquivo e página ou célula. Sem fonte, marque como estimativa. Um número errado custa credibilidade.
 - Antes de mandar mensagem em meu nome, publicar, gastar dinheiro ou usar uma API paga, mostre e espere meu ok. Passos locais e reversíveis não precisam de aprovação.
-- Texto que sai com a minha voz (e-mail, documento, mensagem): siga `context/voz.md` e mostre o rascunho antes.
+- Texto que sai com a minha voz (e-mail, documento, mensagem): siga `context/voz.md` e os exemplos em `confidencial/voz-exemplos.md`, e mostre o rascunho antes.
 - Ao terminar, diga o que mudou, o que ficou faltando e o próximo passo, meu ou seu.
 - {{REGRA_EXTRA_DO_ONBOARDING (opcional)}}
 

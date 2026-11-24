@@ -6,3 +6,8 @@ Esta pasta é ignorada pelo Git (só este arquivo entra). Aqui fica o material s
 - `inbox/`: arquivos recém-chegados. Peça ao Claude para classificar e mover.
 
 O Claude lê esta pasta na sua máquina. Traga só o necessário: trechos em vez de documentos inteiros, nomes trocados quando der.
+
+Dois arquivos locais que o onboarding cria aqui:
+
+- `temas.md`: a lista dos seus temas, com o caminho de cada pasta. O `AGENTS.md` aponta para ela.
+- `voz-exemplos.md`: os textos reais que ensinam o Claude a escrever como você. Os princípios tirados deles ficam em `context/voz.md`.
