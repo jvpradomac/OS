@@ -22,7 +22,7 @@ Dentro do Claude Code, digite:
 /onboarding
 ```
 
-O Claude faz perguntas em blocos curtos (você, o seu trabalho, suas fontes, sigilo e um texto seu), preenche os arquivos, desliga o vínculo com este repositório de origem pergunta para que você mais quer usar o sistema e termina com uma primeira tarefa real. Leva cerca de 20 minutos.
+O Claude faz perguntas em blocos curtos (você, para que você mais quer usar o sistema, suas fontes, sigilo e um texto seu), preenche os arquivos, desliga o vínculo com este repositório de origem e termina com uma primeira tarefa real. Leva cerca de 20 minutos.
 
 ## Depois do onboarding
 
