@@ -11,7 +11,7 @@ Uma pasta que faz cada nova sessão do Claude Code começar sabendo quem você �
 ## Três passos
 
 ```bash
-git clone <URL-DESTE-REPOSITORIO> meu-os
+git clone https://github.com/jvpradomac/os.git meu-os
 cd meu-os
 claude
 ```
