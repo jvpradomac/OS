@@ -69,11 +69,11 @@ Depois das respostas, faça, mostrando cada comando antes:
 - Acrescente ao fim de `.claude/rules/sigilo.md` as regras específicas do compliance que ele citou.
 - Preencha a data na decisão inicial de `decisoes/log.md`.
 
-## Bloco 5. Voz → `confidencial/voz-exemplos.md` e `context/voz.md`
+## Bloco 5. Voz → `context/voz.md`
 
 Peça 1 ou 2 textos reais que ele escreveu (um e-mail, um trecho de documento), **colados sem edição**. Se ele começar a digitar um texto novo, explique: um texto escrito agora já sai moldado pela conversa; o que vale é o texto que ele mandou de verdade. Peça para trocar nomes e números de terceiros por fictícios antes de colar.
 
-Cole os textos em `confidencial/voz-exemplos.md`, que fica fora do Git. Em `context/voz.md`, que é versionado, escreva só de 3 a 5 princípios que você observa neles, sem citar trechos.
+Cole os textos em "Exemplos reais" e escreva de 3 a 5 princípios que você observa neles.
 
 ## Fechamento
 

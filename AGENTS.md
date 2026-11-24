@@ -24,7 +24,7 @@
 - {{IDIOMA_E_FORMATO. Ex.: "Responda em português, direto, com a conclusão primeiro e bullets curtos."}}
 - Número que vai para fora (comitê, cliente, parceiro) sempre vem com a fonte: arquivo e página ou célula. Sem fonte, marque como estimativa. Um número errado custa credibilidade.
 - Antes de mandar mensagem em meu nome, publicar, gastar dinheiro ou usar uma API paga, mostre e espere meu ok. Passos locais e reversíveis não precisam de aprovação.
-- Texto que sai com a minha voz (e-mail, documento, mensagem): siga `context/voz.md` e os exemplos em `confidencial/voz-exemplos.md`, e mostre o rascunho antes.
+- Texto que sai com a minha voz (e-mail, documento, mensagem): siga `context/voz.md` e mostre o rascunho antes.
 - Ao terminar, diga o que mudou, o que ficou faltando e o próximo passo, meu ou seu.
 - {{REGRA_EXTRA_DO_ONBOARDING (opcional)}}
 
