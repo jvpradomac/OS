@@ -10,7 +10,7 @@ Quinze minutos que fazem o OS melhorar toda semana. Siga a ordem e seja breve em
 
 ## 1. O que aconteceu
 
-- Leia `context/prioridades.md` e os `README.md` de `confidencial/deals/*/` e `confidencial/carteira/*/` alterados nos últimos 7 dias.
+- Leia `context/prioridades.md` e os `README.md` de `confidencial/*/` alterados nos últimos 7 dias.
 - Se houver conector de agenda aprovado em `conexoes.md`, liste as reuniões da semana que passou e da próxima.
 - Mostre em até 8 bullets: avanços, o que travou e o que está atrasado.
 

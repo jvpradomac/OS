@@ -106,6 +106,11 @@ h2{font-family:var(--disp);font-weight:500;font-size:22px;margin-top:30px}
 .tb div span:last-child{color:var(--blue)}
 
 /* passos */
+.tree{background:var(--navy);color:var(--white);border-radius:6px;box-shadow:4px 4px 0 var(--brand);padding:18px 20px;font-family:var(--mono);font-size:11px;line-height:1.62;white-space:pre;margin-top:16px}
+.tree .c{color:rgba(255,255,255,.5)} .tree .y{color:var(--sky)} .tree .o{color:#f2b35a}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.legend .box{margin-top:0;padding:13px 14px}
+.legend p{margin-top:9px;font-size:11.5px;line-height:1.45}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
 .steps .box{margin-top:0;padding:13px 14px}
 .steps .d{font-family:var(--disp);font-size:9px;letter-spacing:.28em;color:var(--muted);font-weight:500}
@@ -144,7 +149,7 @@ h2{font-family:var(--disp);font-weight:500;font-size:22px;margin-top:30px}
   <div class="mark"></div>
   <p class="kick">Um guia Patria × Poli AI</p>
   <h1>O seu<br><span class="px">Operating</span><br><span class="px">System</span></h1>
-  <p class="sub">Doze níveis em Contexto, Memória, Skills e Rotinas, com um prompt para colar no Claude Code em cada um. Antes deles, o nível zero: sigilo.</p>
+  <p class="sub">Doze níveis em Contexto, Memória, Skills e Rotinas, com um prompt para colar no Claude Code em cada um.</p>
   <div class="band"></div>
 </section>
 
@@ -154,8 +159,8 @@ h2{font-family:var(--disp);font-weight:500;font-size:22px;margin-top:30px}
   <div class="box" style="border-color:var(--brand);box-shadow:4px 4px 0 var(--brand)">
     <span class="tag brand">Leia-me</span>
     <p style="margin-top:12px"><b>O que é.</b> O guia que acompanha o repositório do seu operating system no Claude Code. Um operating system é uma pasta com instruções, memória, procedimentos e travas que o Claude lê sozinho. Você explica uma vez quem é e como trabalha, e cada nova sessão começa sabendo disso.</p>
-    <p><b>Como usar.</b> O jeito mais rápido: clone o repositório, abra o Claude Code e digite <code>/onboarding</code>. Ele faz as perguntas e monta o básico em cerca de 20 minutos. Depois, volte a este guia para subir de nível. Cada parte tem uma página explicando os três níveis e outra com os prompts. A página 3 mostra o mapa e a 14 tem o checklist.</p>
-    <p><b>Antes de tudo.</b> Leia a página 4, sobre sigilo. Dados do fundo só entram pela conta comercial do Claude e nunca vão para o Git.</p>
+    <p><b>Como usar.</b> O jeito mais rápido: clone o repositório, abra o Claude Code e digite <code>/onboarding</code>. Ele faz as perguntas e monta o básico em cerca de 20 minutos. Depois, volte a este guia para subir de nível. Cada parte tem uma página explicando os três níveis e outra com os prompts. A página 3 mostra o mapa, a 5 mostra as pastas e a 15 tem o checklist.</p>
+    <p><b>Antes de tudo.</b> Leia a página 4: dois cuidados de privacidade que levam um minuto.</p>
   </div>
   <h2>Cinco palavras</h2>
   <p class="lead" style="margin-top:6px">Elas aparecem no guia inteiro.</p>
@@ -163,10 +168,10 @@ h2{font-family:var(--disp);font-weight:500;font-size:22px;margin-top:30px}
     <div><span class="k">Harness</span><span>Tudo o que está em volta do modelo: contexto, ferramentas e regras. O modelo é o mesmo para todo mundo; o harness é o que muda o resultado.</span></div>
     <div><span class="k">Contexto</span><span>O que o Claude enxerga numa sessão. Uma parte carrega sempre (o <code>CLAUDE.md</code>), outra só quando a tarefa pede (regras por área, skills, arquivos).</span></div>
     <div><span class="k">Memória</span><span>O que fica de uma sessão para a outra: arquivos de contexto, decisões e a memória automática do Claude Code.</span></div>
-    <div><span class="k">Skill</span><span>Um procedimento salvo que vira comando, como <code>/memo-ic</code>. Fica em <code>.claude/skills/</code>.</span></div>
+    <div><span class="k">Skill</span><span>Um procedimento salvo que vira comando, como <code>/calibrar</code>. Fica em <code>.claude/skills/</code>.</span></div>
     <div><span class="k">Hook</span><span>Um script que roda sozinho num evento, como antes de um commit. Garante o que não pode depender de o modelo lembrar.</span></div>
   </div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>02 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>02 / 15</b></div>
 </section>
 
 <!-- 3 · MAPA -->
@@ -177,62 +182,100 @@ h2{font-family:var(--disp);font-weight:500;font-size:22px;margin-top:30px}
   <div class="lv"><span></span><span class="h c1">NÍVEL 1</span><span class="h c2">NÍVEL 2</span><span class="h c3">NÍVEL 3</span></div>
   <div class="map">
     <div class="r"><div class="part"><span class="px">C</span><span>Contexto</span></div>
-      <div><b>O manual</b>CLAUDE.md curto que importa o AGENTS.md: quem você é e como trabalhar.<i>Página 5</i></div>
-      <div><b>O mapa das pastas</b>O Claude acha qualquer coisa abrindo 2 ou 3 arquivos.<i>Página 5</i></div>
-      <div><b>Regras por área</b>Instruções que só carregam na pasta certa.<i>Página 5</i></div></div>
+      <div><b>O manual</b>CLAUDE.md curto que importa o AGENTS.md: quem você é e como trabalhar.<i>Página 6</i></div>
+      <div><b>O mapa das pastas</b>O Claude acha qualquer coisa abrindo 2 ou 3 arquivos.<i>Página 6</i></div>
+      <div><b>Regras por área</b>Instruções que só carregam na pasta certa.<i>Página 6</i></div></div>
     <div class="r"><div class="part"><span class="px">M</span><span>Memória</span></div>
-      <div><b>Memória longa</b>Prioridades, decisões e voz em texto simples.<i>Página 7</i></div>
-      <div><b>Memória curta</b>Conversas enxutas e compactação com propósito.<i>Página 7</i></div>
-      <div><b>Memória que evolui</b>Nunca corrigir o Claude duas vezes na mesma coisa.<i>Página 7</i></div></div>
+      <div><b>Memória longa</b>Prioridades, decisões e voz em texto simples.<i>Página 8</i></div>
+      <div><b>Memória curta</b>Conversas enxutas e compactação com propósito.<i>Página 8</i></div>
+      <div><b>Memória que evolui</b>Nunca corrigir o Claude duas vezes na mesma coisa.<i>Página 8</i></div></div>
     <div class="r"><div class="part"><span class="px">S</span><span>Skills</span></div>
-      <div><b>Skills de entrega</b>Cada entrega recorrente vira um comando.<i>Página 9</i></div>
-      <div><b>O modelo certo</b>Tarefa simples em modelo menor; revisão com olhar limpo.<i>Página 9</i></div>
-      <div><b>Skills que aprendem</b>Cada feedback deixa a skill mais afiada.<i>Página 9</i></div></div>
+      <div><b>Skills de entrega</b>Cada entrega recorrente vira um comando.<i>Página 10</i></div>
+      <div><b>O modelo certo</b>Tarefa simples em modelo menor; revisão com olhar limpo.<i>Página 10</i></div>
+      <div><b>Skills que aprendem</b>Cada feedback deixa a skill mais afiada.<i>Página 10</i></div></div>
     <div class="r"><div class="part"><span class="px">R</span><span>Rotinas</span></div>
-      <div><b>O ritual da semana</b>Quinze minutos às sextas que melhoram o sistema.<i>Página 11</i></div>
-      <div><b>Rotinas passivas</b>Só avisam quando há algo que importa, com teto de custo.<i>Página 11</i></div>
-      <div><b>Conectar com leveza</b>Cada sistema pelo caminho mais leve e aprovado.<i>Página 11</i></div></div>
+      <div><b>O ritual da semana</b>Quinze minutos às sextas que melhoram o sistema.<i>Página 12</i></div>
+      <div><b>Rotinas passivas</b>Só avisam quando há algo que importa, com teto de custo.<i>Página 12</i></div>
+      <div><b>Conectar com leveza</b>Cada sistema pelo caminho mais leve e aprovado.<i>Página 12</i></div></div>
   </div>
   <div class="box">
     <span class="tag">A ideia por trás dos doze</span>
     <p style="margin-top:10px">O que faz um operating system funcionar não é a aparência, é como o contexto está organizado por baixo. Cada nível deixa o seu Claude mais barato, mais rápido ou melhor, e continua valendo quando um modelo novo chega.</p>
     <p class="muted" style="font-size:10.5px">Estrutura inspirada no framework ARMS (Apps, Routines, Memory, Skills) do guia Agentic OS v2, da RoboNuggets, adaptada para o trabalho de um gestor de investimentos.</p>
   </div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>03 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>03 / 15</b></div>
 </section>
 
 <!-- 4 · NÍVEL ZERO -->
 <section class="page" id="p4">
   <p class="kick">Nível zero</p>
   <div class="ph"><span class="px">0</span><h1>Sigilo e LGPD</h1></div>
-  <p class="lead" style="margin-top:10px">Vem antes de qualquer nível porque um vazamento custa mais do que todo o ganho de produtividade. O repositório já chega com as travas; esta página explica o que elas fazem.</p>
+  <p class="lead" style="margin-top:10px">Você conhece sigilo melhor do que ninguém. Aqui fica só o que muda quando o assunto é o Claude: dois ajustes seus e as travas que o repositório já traz.</p>
   <div class="sg">
-    <div class="box"><span class="tag">I · Conta</span><h3>Conta comercial do fundo</h3><ul>
-      <li>Claude Team ou Enterprise, com termos comerciais e acordo de tratamento de dados. É o que a LGPD pede quando entram dados de cotistas, investidas ou pessoas.</li>
-      <li>Conta pessoal serve para testar, sem nenhum dado real.</li>
-      <li>Conectores (e-mail, agenda, drive) só com aprovação do TI e do compliance.</li></ul></div>
-    <div class="box"><span class="tag">II · Repositório</span><h3>Estrutura no Git, dados fora</h3><ul>
-      <li>Deals, carteira e cotistas ficam em <code>confidencial/</code>. O que você gera fica em <code>saidas/</code>.</li>
-      <li>As duas pastas são ignoradas pelo Git e não saem da sua máquina.</li>
-      <li>Remoto, só privado e aprovado pelo TI. O onboarding desliga o vínculo com o repositório de origem.</li></ul></div>
-    <div class="box"><span class="tag">III · Travas</span><h3>Garantias que não dependem de lembrar</h3><ul>
+    <div class="box"><span class="tag">I · Conta</span><h3>Treinamento desligado</h3><ul>
+      <li>Nas configurações do Claude, em Privacidade, desligue a opção <b>"Help improve Claude"</b>.</li>
+      <li>Com ela desligada, suas conversas não são usadas para treinar os próximos modelos.</li>
+      <li>Leva um minuto e vale para o app e para o Claude Code.</li></ul></div>
+    <div class="box"><span class="tag">II · Dados</span><h3>O mínimo que resolve</h3><ul>
+      <li>Trechos em vez do documento inteiro.</li>
+      <li>Nomes trocados e números arredondados quando a tarefa permitir.</li>
+      <li>CPF, contas e dados de terceiros só se forem indispensáveis.</li></ul></div>
+    <div class="box"><span class="tag">III · Travas</span><h3>O que o repositório garante</h3><ul>
+      <li><code>confidencial/</code> e <code>saidas/</code> nunca entram no Git.</li>
       <li>Um hook bloqueia commit de planilha, PDF, apresentação, CPF ou CNPJ.</li>
-      <li>O Claude não pode ler <code>.env</code> nem arquivos de chave.</li>
-      <li><code>git push</code> e acessos à web sempre pedem a sua confirmação.</li></ul></div>
+      <li><code>git push</code> e acessos à web pedem a sua confirmação.</li></ul></div>
   </div>
   <div class="box">
     <span class="tag brand">Regras de bolso</span>
     <ul style="margin:10px 0 0 16px;line-height:1.6">
       <li>Dado pessoal só quando a tarefa precisa, e nunca copiado para contexto, memória ou skills.</li>
-      <li>Pesquisa na web, só com informação pública. Nada de <code>confidencial/</code> em serviços que não estejam aprovados em <code>conexoes.md</code>.</li>
-      <li>Memória e <code>/calibrar</code> guardam jeitos de trabalhar, nunca números ou nomes de deals em andamento.</li>
+      <li>Memória e <code>/calibrar</code> guardam jeitos de trabalhar, nunca números ou nomes de negócios em andamento.</li>
+      <li>Remoto Git, só privado. O onboarding desliga o vínculo com o repositório de origem.</li>
     </ul>
   </div>
   <div class="box">
     <span class="tag">Um teste rápido</span>
     <p style="margin-top:10px">Peça ao Claude: <i>"crie um arquivo de teste com um CPF fictício e tente commitar"</i>. Se a trava responder "Commit bloqueado pela trava de sigilo", está tudo certo. Se o commit passar, rode <code>git config core.hooksPath .githooks</code> e tente de novo.</p>
   </div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>04 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>04 / 15</b></div>
+</section>
+
+<!-- 5 · PASTAS -->
+<section class="page" id="pf">
+  <p class="kick">A organização</p>
+  <h1>Como ficam as <span class="px">pastas</span></h1>
+  <p class="lead">Tudo em texto simples: você abre e edita qualquer arquivo, e o Claude também. A cor diz o que entra no Git e o que nunca sai da sua máquina.</p>
+<div class="tree"><span class="y">meu-os/</span>
+├── <span class="y">CLAUDE.md</span>             <span class="c"># lido em toda sessão; importa o AGENTS.md</span>
+├── <span class="y">AGENTS.md</span>             <span class="c"># quem você é, como trabalhar, o mapa</span>
+├── context/
+│   ├── sobre-mim.md      <span class="c"># cargo, rotina, como quer as respostas</span>
+│   ├── sobre-o-fundo.md  <span class="c"># o time, documentos, glossário</span>
+│   ├── prioridades.md    <span class="c"># 90 dias e esta semana</span>
+│   └── voz.md            <span class="c"># textos seus, para escrever como você</span>
+├── decisoes/log.md       <span class="c"># o que está valendo e por quê</span>
+├── conexoes.md           <span class="c"># sistemas liberados e por qual meio</span>
+├── <span class="o">confidencial/</span>         <span class="c"># material sensível, fora do Git</span>
+│   ├── <span class="o">inbox/</span>            <span class="c"># o que acabou de chegar</span>
+│   └── <span class="o">&lt;seu-tema&gt;/</span>       <span class="c"># uma pasta por uso, criada no onboarding</span>
+│       └── <span class="o">README.md</span>     <span class="c"># o que é, estado, próximo passo</span>
+├── <span class="o">saidas/</span>               <span class="c"># o que o Claude gera, com data; fora do Git</span>
+├── .claude/
+│   ├── skills/           <span class="c"># onboarding, calibrar, criar-skill + as suas</span>
+│   ├── rules/sigilo.md   <span class="c"># regras; outras nascem do seu trabalho</span>
+│   ├── agents/revisor.md <span class="c"># revisão com contexto limpo</span>
+│   └── settings.json     <span class="c"># permissões e hooks</span>
+└── scripts/hooks/        <span class="c"># travas automáticas de sigilo</span></div>
+  <div class="legend">
+    <div class="box"><span class="tag" style="background:var(--l1)">Você edita</span><p><code>AGENTS.md</code>, <code>context/</code> e <code>decisoes/</code>. É a parte que diz quem você é. Entra no Git do seu repositório.</p></div>
+    <div class="box"><span class="tag" style="background:var(--l2)">O Claude cuida</span><p>Skills, regras e os <code>README.md</code> de cada tema crescem com o uso, sempre com o seu ok antes de gravar.</p></div>
+    <div class="box"><span class="tag" style="background:var(--l3)">Nunca sai daqui</span><p><code>confidencial/</code> e <code>saidas/</code> ficam só na sua máquina. O Git ignora e um hook bloqueia.</p></div>
+  </div>
+  <div class="box">
+    <span class="tag brand">Depois do onboarding</span>
+    <p style="margin-top:10px">Nada do seu trabalho vem pronto. As pastas de tema em <code>confidencial/</code> e a primeira skill nascem do que você contar que quer fazer com o sistema. Se o seu uso principal muda, a estrutura muda junto.</p>
+  </div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>05 / 15</b></div>
 </section>
 
 <!-- 5 · CONTEXTO -->
@@ -245,15 +288,15 @@ h2{font-family:var(--disp);font-weight:500;font-size:22px;margin-top:30px}
     <ul><li><b>Curto e verdadeiro.</b> A documentação recomenda menos de 200 linhas. Acima disso, o Claude segue pior cada regra.</li>
     <li><b>Dê o porquê.</b> Regra com motivo é seguida com bom senso. Maiúsculas e "nunca, sem exceção" fazem o modelo exagerar.</li></ul></div></div>
   <div class="lvl"><span class="n c2">L2</span><div><h3>O mapa das pastas</h3>
-    <p>Em vez de um livro de regras, o manual funciona como um mapa: aponta para <code>context/</code>, <code>decisoes/</code> e para cada empresa em <code>confidencial/</code>. Cada empresa tem um <code>README.md</code> no topo com estado e próximo passo, como a ficha de um catálogo.</p>
+    <p>Em vez de um livro de regras, o manual funciona como um mapa: aponta para <code>context/</code>, <code>decisoes/</code> e para cada tema em <code>confidencial/</code>. Cada pasta de tema tem um <code>README.md</code> no topo com estado e próximo passo, como a ficha de um catálogo.</p>
     <p class="note">Texto simples basta. O Claude busca nos arquivos sozinho, sem banco vetorial.</p></div></div>
   <div class="lvl"><span class="n c3">L3</span><div><h3>Regras por área</h3>
-    <p>Arquivos em <code>.claude/rules/</code> com um campo <code>paths</code> só carregam quando o Claude mexe naquela pasta. O repositório já traz duas: <code>sigilo.md</code>, que vale sempre, e <code>deals-e-carteira.md</code>, que só aparece quando ele abre um deal. É aqui que entra o jeito do fundo: o que o comitê sempre cobra, como se escreve um relatório a cotistas.</p></div></div>
+    <p>Arquivos em <code>.claude/rules/</code> com um campo <code>paths</code> só carregam quando o Claude mexe naquela pasta. O repositório já traz <code>sigilo.md</code>, que vale sempre. As outras nascem do seu trabalho: o que sempre cobram num tipo de documento, como o seu time escreve para quem é de fora.</p></div></div>
   <div class="box">
     <span class="tag">Um teste rápido</span>
-    <p style="margin-top:10px">Pergunte ao Claude onde está algo, como o último material de uma empresa. Se ele abrir dois ou três arquivos para responder, o mapa funciona. Se sair procurando em tudo, falta uma camada.</p>
+    <p style="margin-top:10px">Pergunte ao Claude onde está algo, como o último material de um tema. Se ele abrir dois ou três arquivos para responder, o mapa funciona. Se sair procurando em tudo, falta uma camada.</p>
   </div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>05 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>06 / 15</b></div>
 </section>
 
 <!-- 6 · CONTEXTO PROMPTS -->
@@ -264,21 +307,21 @@ h2{font-family:var(--disp);font-weight:500;font-size:22px;margin-top:30px}
     <p class="tip">Cinco blocos de perguntas: você, o trabalho, fontes, sigilo e um texto seu colado sem edição. Para refazer só um bloco: <code>/onboarding sigilo</code>.</p></div>
   <div class="pr"><div class="top"><span class="tag t2">Nível 2 · O mapa das pastas</span><span class="where">Cole no Claude Code</span></div>
 <pre>organize meu os para você achar qualquer coisa abrindo 2 ou 3 arquivos.
-- crie um README.md no topo de cada empresa em confidencial/deals e
-  confidencial/carteira: o que é, estágio, últimas datas e próximo passo
+- crie um README.md no topo de cada pasta de tema em confidencial/:
+  o que é, estado, últimas datas e próximo passo
 - confira se o mapa do AGENTS.md aponta para cada pasta que eu uso
-- teste: me diga onde está o último material de uma empresa e quantos
+- teste: me diga onde está o último material de um tema e quantos
   arquivos você abriu
 mostre o novo mapa antes de mover qualquer coisa.</pre></div>
   <div class="pr"><div class="top"><span class="tag t3">Nível 3 · Regras por área</span><span class="where">Cole no Claude Code</span></div>
-<pre>crie uma regra por área para [memos de ic / relatório a cotistas / board deck].
+<pre>crie uma regra por área para [o tipo de documento que eu mais produzo].
 - arquivo em .claude/rules/ com paths só das pastas daquele tema
-- me pergunte as 5 coisas que o comitê sempre cobra e escreva cada uma
-  como regra, com o motivo
+- me pergunte as 5 coisas que sempre cobram nesse documento e escreva
+  cada uma como regra, com o motivo
 - nada de maiúsculas ou "nunca, sem exceção": explique o porquê
 mostre a regra antes de salvar.</pre>
     <p class="tip">Uma regra boa explica a família inteira de erros, não um caso. Se a regra começar a crescer demais, ela provavelmente é uma skill.</p></div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>06 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>07 / 15</b></div>
 </section>
 
 <!-- 7 · MEMÓRIA -->
@@ -298,12 +341,12 @@ mostre a regra antes de salvar.</pre>
     <p>Se você precisou corrigir o Claude duas vezes na mesma coisa, a memória falhou. Na primeira correção que deve durar, digite <code>/calibrar</code>: ele acha o princípio por trás do erro e grava no lugar certo.</p>
     <div class="tb">
       <div><span>Jeito de trabalhar que vale sempre</span><span>AGENTS.md</span></div>
-      <div><span>Regra de um tema (memos, carteira)</span><span>.claude/rules/ com paths</span></div>
+      <div><span>Regra de um tema ou documento</span><span>.claude/rules/ com paths</span></div>
       <div><span>Procedimento que se repete</span><span>Uma skill</span></div>
       <div><span>Fato sobre você, o fundo ou a semana</span><span>context/</span></div>
       <div><span>Algo que não pode falhar nunca</span><span>Hook ou permissão</span></div>
     </div></div></div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>07 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>08 / 15</b></div>
 </section>
 
 <!-- 8 · MEMÓRIA PROMPTS -->
@@ -315,7 +358,7 @@ mostre a regra antes de salvar.</pre>
   um prazo ou uma entrega
 - leia o que fizemos nas últimas sessões e proponha linhas para
   decisoes/log.md, cada uma com a decisão e o motivo
-- nada de números de deals ou dados de pessoas na memória
+- nada de números sensíveis ou dados de pessoas na memória
 mude só depois do meu ok.</pre></div>
   <div class="pr"><div class="top"><span class="tag t2">Nível 2 · Memória curta</span><span class="where">Cole no Claude Code</span></div>
 <pre>me ajude a gastar menos contexto em conversas longas.
@@ -334,7 +377,7 @@ mostre a mudança no CLAUDE.md antes de salvar.</pre>
 - uma vez por mês, liste regras velhas ou contraditórias para eu limpar
 não mude nada sem a minha aprovação.</pre>
     <p class="tip">Uma boa calibração costuma deixar o arquivo mais curto, não mais longo.</p></div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>08 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>09 / 15</b></div>
 </section>
 
 <!-- 9 · SKILLS -->
@@ -343,16 +386,16 @@ não mude nada sem a minha aprovação.</pre>
   <div class="ph"><span class="px">S</span><h1>Skills</h1></div>
   <p class="lead" style="margin-top:8px">Skills são procedimentos salvos que o Claude segue quando você chama. No contexto fica só o nome e a descrição de cada uma; o corpo entra quando ela é usada.</p>
   <div class="lvl"><span class="n c1">L1</span><div><h3>Skills de entrega</h3>
-    <p>O repositório traz <code>/preparar-reuniao</code>, <code>/memo-ic</code> e <code>/revisao-semanal</code>. A partir daí, toda tarefa feita três vezes merece a sua. Três tipos funcionam bem:</p>
-    <ul><li><b>Procedimento:</b> passos fixos, como a triagem de um teaser.</li>
-    <li><b>Base de referência:</b> exemplos que se consultam, como e-mails bons ou comparáveis do setor. Para não engessar, peça que 8 de 10 ideias sigam as referências e 2 tragam algo novo.</li>
-    <li><b>Artefato:</b> documento com cara padronizada, gerado sempre do mesmo template, como o one-pager do fundo.</li></ul></div></div>
+    <p>O repositório não vem com skills do seu trabalho: elas nascem do que você contar no onboarding, sob medida. Depois, toda tarefa feita três vezes merece a sua. Três tipos funcionam bem:</p>
+    <ul><li><b>Procedimento:</b> passos fixos, sempre na mesma ordem.</li>
+    <li><b>Base de referência:</b> exemplos que se consultam, como os seus melhores textos. Para não engessar, peça que 8 de 10 ideias sigam as referências e 2 tragam algo novo.</li>
+    <li><b>Artefato:</b> documento com cara padronizada, gerado sempre do mesmo template.</li></ul></div></div>
   <div class="lvl"><span class="n c2">L2</span><div><h3>O modelo certo</h3>
-    <p>Nem toda skill precisa do modelo maior. Formatar, classificar a inbox ou checar ortografia rodam bem com <code>model: haiku</code> ou <code>sonnet</code> no topo do arquivo, gastando menos do seu limite. Análise e memo continuam no maior.</p>
+    <p>Nem toda skill precisa do modelo maior. Formatar, classificar a inbox ou checar ortografia rodam bem com <code>model: haiku</code> ou <code>sonnet</code> no topo do arquivo, gastando menos do seu limite. Análises e textos longos continuam no maior.</p>
     <p class="note">Entrega importante passa pelo subagente <code>revisor</code>, que lê sem o viés da conversa que a produziu.</p></div></div>
   <div class="lvl"><span class="n c3">L3</span><div><h3>Skills que aprendem</h3>
-    <p>Quanto mais você usa uma skill, melhor ela deve ficar. Quando você corrigir um memo, o <code>/calibrar</code> leva a lição para dentro da skill <code>/memo-ic</code> ou do template, e o próximo já sai certo. É uma versão simples da mesma ideia que os laboratórios usam para treinar modelos: feedback que vira comportamento.</p></div></div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>09 / 14</b></div>
+    <p>Quanto mais você usa uma skill, melhor ela deve ficar. Quando você corrigir um resultado, o <code>/calibrar</code> leva a lição para dentro da skill ou do template, e o próximo já sai certo. É uma versão simples da mesma ideia que os laboratórios usam para treinar modelos: feedback que vira comportamento.</p></div></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>10 / 15</b></div>
 </section>
 
 <!-- 10 · SKILLS PROMPTS -->
@@ -360,8 +403,7 @@ não mude nada sem a minha aprovação.</pre>
   <p class="kick">Skills · prompts</p>
   <div class="pr"><div class="top"><span class="tag t1">Nível 1 · Uma skill sua</span><span class="where cmd">/criar-skill ou cole</span></div>
 <pre>transforme a tarefa que eu mais repito em uma skill.
-- me pergunte qual: briefing de reunião, triagem de teaser, memo,
-  resposta a cotista ou outra
+- descubra qual pelo que fizemos nas últimas sessões, ou me pergunte
 - guarde um exemplo bom em referencias/ e deixe o SKILL.md curto
 - se a skill gerar ideias, 8 de 10 seguem as referências e 2 trazem
   algo novo
@@ -370,7 +412,7 @@ mostre a skill antes de salvar.</pre></div>
 <pre>rode cada skill no tamanho certo de modelo.
 - skills de passos fixos, como formatar ou classificar a inbox, com
   model: haiku ou sonnet no topo
-- análise e memo continuam no modelo maior
+- análises e textos longos continuam no modelo maior
 - entregas importantes passam pelo subagente revisor antes de vir
   para mim
 me mostre o que mudou em cada skill.</pre></div>
@@ -383,7 +425,7 @@ me mostre o que mudou em cada skill.</pre></div>
 - mantenha um registro curto do que mudou e por quê
 comece por uma skill. mostre a mudança antes de salvar.</pre>
     <p class="tip">A melhor correção é um princípio que explica o erro, não mais uma regra empilhada sobre a anterior.</p></div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>10 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>11 / 15</b></div>
 </section>
 
 <!-- 11 · ROTINAS -->
@@ -396,13 +438,13 @@ comece por uma skill. mostre a mudança antes de salvar.</pre>
     <p class="note">O hook de início de sessão já avisa quando as prioridades passam de 10 dias sem revisão.</p></div></div>
   <div class="lvl"><span class="n c2">L2</span><div><h3>Rotinas passivas</h3>
     <p>Rotina ativa entrega algo para você revisar toda vez. Rotina passiva roda em segundo plano e só avisa quando acha algo que importa. Com dez rotinas ativas, você ganha dez coisas para revisar por semana; prefira as passivas.</p>
-    <ul><li>Notícia relevante e pública sobre uma investida ou um alvo.</li>
-    <li>Prazo de documento ou de comitê chegando.</li>
+    <ul><li>Notícia pública relevante sobre um tema que você acompanha.</li>
+    <li>Um prazo chegando.</li>
     <li>Arquivo novo em <code>confidencial/inbox/</code> esperando classificação.</li></ul>
     <p class="note">Toda rotina gasta limite ou crédito. Saiba quanto cada uma custa e ponha teto nas mais caras.</p></div></div>
   <div class="lvl"><span class="n c3">L3</span><div><h3>Conectar com leveza</h3>
-    <p>Primeiro, confira se o sistema está aprovado pelo TI em <code>conexoes.md</code>. Depois, escolha o caminho mais leve que funcione: arquivo exportado na pasta, ferramenta do próprio fabricante, linha de comando, API e, por último, MCP. Cada MCP conectado ocupa contexto em toda sessão, mesmo sem uso; mantenha poucos.</p></div></div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>11 / 14</b></div>
+    <p>Primeiro, confira se o sistema está liberado em <code>conexoes.md</code>. Depois, escolha o caminho mais leve que funcione: arquivo exportado na pasta, ferramenta do próprio fabricante, linha de comando, API e, por último, MCP. Cada MCP conectado ocupa contexto em toda sessão, mesmo sem uso; mantenha poucos.</p></div></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>12 / 15</b></div>
 </section>
 
 <!-- 12 · ROTINAS PROMPTS -->
@@ -418,22 +460,22 @@ mostre como ficou antes de ativar.</pre></div>
   <div class="pr"><div class="top"><span class="tag t2">Nível 2 · Rotinas passivas</span><span class="where">Cole no Claude Code</span></div>
 <pre>sugira 3 rotinas passivas para o meu trabalho.
 - passiva: só me avisa quando acha algo que vale a pena
-- ideias: notícia pública sobre uma investida, prazo de comitê chegando,
-  arquivo novo na inbox
+- ideias: notícia pública sobre um tema que acompanho, um prazo
+  chegando, arquivo novo na inbox
 - para cada uma: o que faz, quando roda, custo estimado por semana e
   um teto
-- só informação pública na web; nada de confidencial/ em serviço externo
+- nada de confidencial/ em serviço externo
 não crie nada até eu escolher.</pre></div>
   <div class="pr"><div class="top"><span class="tag t3">Nível 3 · Conectar com leveza</span><span class="where">Cole no Claude Code</span></div>
 <pre>conecte o claude ao [sistema], pelo caminho mais leve.
-- confira primeiro se o sistema está aprovado em conexoes.md; se não
-  estiver, pare e me diga o que levar ao ti
+- confira primeiro se o sistema está liberado em conexoes.md; se não
+  estiver, pare e me pergunte
 - ordem: arquivo exportado, ferramenta do fabricante, linha de comando,
   api e, por último, mcp
 - se precisar de chave, eu coloco num arquivo .env, nunca no chat
 - teste com uma leitura real e registre em conexoes.md
 diga o que escolheu e por quê.</pre></div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>12 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>13 / 15</b></div>
 </section>
 
 <!-- 13 · PARA COMEÇAR -->
@@ -445,7 +487,7 @@ diga o que escolheu e por quê.</pre></div>
   <h2>A primeira semana</h2>
   <div class="steps">
     <div class="box"><span class="d">DIA 1</span><h3>Configurar</h3><code>/onboarding</code><p>Responda os cinco blocos e faça a primeira tarefa real ainda na mesma conversa.</p></div>
-    <div class="box"><span class="d">DIAS 2 A 4</span><h3>Usar e corrigir</h3><code>/preparar-reuniao</code><p>Use em reuniões e materiais do dia. Cada correção que deve durar vira <code>/calibrar</code>.</p></div>
+    <div class="box"><span class="d">DIAS 2 A 4</span><h3>Usar e corrigir</h3><code>/calibrar</code><p>Use nas tarefas do dia. Cada correção que deve durar vira regra.</p></div>
     <div class="box"><span class="d">SEXTA</span><h3>Fechar a semana</h3><code>/revisao-semanal</code><p>Prioridades da próxima semana e até três sugestões do que automatizar.</p></div>
     <div class="box"><span class="d">SEMANA 2</span><h3>Uma skill sua</h3><code>/criar-skill</code><p>A tarefa que mais se repetiu vira comando. Depois, a primeira rotina passiva.</p></div>
   </div>
@@ -453,12 +495,11 @@ diga o que escolheu e por quê.</pre></div>
   <div class="cmds">
     <div><code>/onboarding</code><span>Entrevista de 20 minutos que monta o seu OS</span></div>
     <div><code>/calibrar</code><span>Transforma uma correção em regra permanente</span></div>
-    <div><code>/preparar-reuniao</code><span>Briefing com histórico, pauta e perguntas</span></div>
-    <div><code>/memo-ic</code><span>Rascunho de memo para o comitê, com fonte em cada número</span></div>
     <div><code>/revisao-semanal</code><span>Fecha a semana e sugere o que automatizar</span></div>
     <div><code>/criar-skill</code><span>Uma tarefa repetida vira comando seu</span></div>
+    <div><code>revisor</code><span>Subagente que revisa entregas importantes com olhar limpo</span></div>
   </div>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>13 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>14 / 15</b></div>
 </section>
 
 <!-- 14 · CHECKLIST -->
@@ -467,7 +508,7 @@ diga o que escolheu e por quê.</pre></div>
   <h1>O <span class="px">checklist</span></h1>
   <p class="lead">Treze itens, um teste cada. Marque conforme for subindo.</p>
   <div class="ck"><span class="px">0</span><div><p class="t">Sigilo</p>
-    <div class="i"><span>N0</span><span>Conta comercial, dados do fundo fora do Git e a trava de commit testada.</span><i></i></div></div></div>
+    <div class="i"><span>N0</span><span>Treinamento desligado, o mínimo de dados e a trava de commit testada.</span><i></i></div></div></div>
   <div class="ck"><span class="px">C</span><div><p class="t">Contexto</p>
     <div class="i"><span>L1</span><span>O manual tem menos de 200 linhas e diz quem você é e como trabalhar.</span><i></i></div>
     <div class="i"><span>L2</span><span>O Claude acha qualquer coisa abrindo 2 ou 3 arquivos.</span><i></i></div>
@@ -485,7 +526,7 @@ diga o que escolheu e por quê.</pre></div>
     <div class="i"><span>L2</span><span>As rotinas só avisam quando há algo, e as caras têm teto.</span><i></i></div>
     <div class="i"><span>L3</span><span>Cada sistema aprovado entra pelo caminho mais leve.</span><i></i></div></div></div>
   <p style="margin-top:22px;font-family:var(--disp);font-size:16px;font-weight:500">Mais barato, mais rápido, melhor. <span class="px" style="font-size:18px">Toda semana.</span></p>
-  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>14 / 14</b></div>
+  <div class="foot"><span>Operating System · Patria × Poli AI</span><b>15 / 15</b></div>
 </section>
 
 </body>

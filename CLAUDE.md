@@ -6,6 +6,6 @@
 - Se o AGENTS.md ainda tiver a marca `ONBOARDING:PENDENTE`, o sistema não foi configurado. Antes de qualquer outra coisa, sugira rodar `/onboarding`.
 - Regras por área ficam em `.claude/rules/` e carregam quando você abre arquivos daquela área. Procedimentos que se repetem viram skill em `.claude/skills/`.
 - Quando o usuário corrigir algo que deve valer nas próximas sessões, ofereça `/calibrar` em vez de guardar a lição em silêncio.
-- Entrega importante (memo, número para comitê, texto para cotista) passa pelo subagente `revisor` antes de ser apresentada como pronta.
+- Entrega importante (número que vai para fora, texto sensível) passa pelo subagente `revisor` antes de ser apresentada como pronta.
 - Use subagente para busca ampla em muitos arquivos, para manter esta conversa limpa. Tarefa simples, faça direto.
 - Ao compactar a conversa, preserve: decisões tomadas, números com a fonte de cada um, arquivos alterados e próximos passos.

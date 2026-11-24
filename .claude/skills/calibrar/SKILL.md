@@ -12,14 +12,14 @@ Lição: $ARGUMENTS (se vazio, use a última correção desta conversa e confirm
 
 ## 1. Ache o princípio
 
-Não grave a correção literal ("troque 'receita' por 'receita líquida' no memo da X"). Pergunte-se por que o erro aconteceu e escreva a regra que evita a família inteira de erros ("em memos, use sempre receita líquida; receita bruta só quando o setor reporta assim, e diga qual"). Uma boa calibração costuma deixar o arquivo mais curto, não mais longo.
+Não grave a correção literal ("troque 'receita' por 'receita líquida' no relatório da X"). Pergunte-se por que o erro aconteceu e escreva a regra que evita a família inteira de erros ("use sempre receita líquida; bruta só quando a fonte reporta assim, e diga qual"). Uma boa calibração costuma deixar o arquivo mais curto, não mais longo.
 
 ## 2. Escolha o lugar
 
 | Se a lição é... | Vai para |
 |---|---|
 | Um jeito de trabalhar que vale em toda sessão | `AGENTS.md`, seção "Como trabalhar comigo" |
-| Específica de uma área (deals, carteira, um tipo de documento) | `.claude/rules/<area>.md` com `paths:` |
+| Específica de um tema ou tipo de documento | `.claude/rules/<area>.md` com `paths:` |
 | Sobre como uma skill executa | O `SKILL.md` daquela skill |
 | Um fato sobre o usuário, o fundo ou prioridades | `context/` |
 | Uma decisão que continua valendo | `decisoes/log.md` |
@@ -30,6 +30,6 @@ Antes de escrever, procure se já existe regra parecida. Se existir, melhore a e
 
 ## 3. Mostre e grave
 
-Mostre o trecho novo (ou o diff) em até 5 linhas, diga o arquivo e por que ali. Grave depois do ok. Nunca grave números, nomes de deals em andamento ou dados de pessoas: calibração é sobre jeito de trabalhar.
+Mostre o trecho novo (ou o diff) em até 5 linhas, diga o arquivo e por que ali. Grave depois do ok. Nunca grave números, nomes de negócios em andamento ou dados de pessoas: calibração é sobre jeito de trabalhar.
 
 Se o `AGENTS.md` + `CLAUDE.md` passarem de ~200 linhas somados, avise e sugira o que mover para uma regra ou skill.
