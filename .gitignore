@@ -1,0 +1,32 @@
+# ── Dados do fundo: nunca entram no Git ──────────────────────
+/confidencial/*
+!/confidencial/LEIA-ME.md
+/saidas/*
+!/saidas/LEIA-ME.md
+
+# ── Segredos e configurações pessoais ───────────────────────
+.env
+.env.*
+*.pem
+*.key
+CLAUDE.local.md
+.claude/settings.local.json
+
+# ── Arquivos de escritório soltos fora de confidencial/ ─────
+# Planilhas, PDFs e apresentações quase sempre carregam dado do fundo.
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+*.pdf
+*.pptx
+*.docx
+*.msg
+*.eml
+!/guia/**
+
+# ── Lixo de sistema ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*

@@ -1,0 +1,8 @@
+/* Space Grotesk e Work Sans (design system do Patria), JetBrains Mono e Doto: Google Fonts, licença OFL. Locais para abrir offline. */
+@font-face{font-family:'Space Grotesk';font-weight:400;font-display:block;src:url(space-grotesk-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Space Grotesk';font-weight:500 700;font-display:block;src:url(space-grotesk-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Work Sans';font-weight:400;font-display:block;src:url(work-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Work Sans';font-weight:500 600;font-display:block;src:url(work-sans-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Work Sans';font-weight:700;font-display:block;src:url(work-sans-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-weight:400 500;font-display:block;src:url(JetBrainsMono-normal-400-latin.woff2) format('woff2')}
+@font-face{font-family:'Doto';font-weight:900;font-display:block;src:url(Doto-900-latin.woff2) format('woff2')}
